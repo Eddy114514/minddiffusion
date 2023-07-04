@@ -196,6 +196,7 @@ def main():
     print(f"WORK DIR:{work_dir}")
     
     device_id = int(os.getenv("DEVICE_ID", 0))
+    print(f"divice_id = {device_id}")
     ms.context.set_context(
         mode=ms.context.GRAPH_MODE,
         device_target="Ascend",
