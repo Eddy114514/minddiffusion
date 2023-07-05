@@ -134,7 +134,6 @@ def main():
     rank_id = 0
     for instance_id in device_num_list:
         device_id = visible_devices[instance_id]
-        print('instance_id:{}, device_id:{}, device_ips:{}'.format(instance_id, device_id, device_ips))
         device_ip = device_ips[device_id]
         device = {'device_id': device_id,
                   'device_ip': device_ip,
