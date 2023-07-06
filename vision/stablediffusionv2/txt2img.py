@@ -200,7 +200,7 @@ def main():
         mode=ms.context.GRAPH_MODE,
         device_target="Ascend",
         device_id=device_id,
-        max_device_memory="30GB"
+        max_device_memory="15GB"
     )
     
     seed_everything(opt.seed)
