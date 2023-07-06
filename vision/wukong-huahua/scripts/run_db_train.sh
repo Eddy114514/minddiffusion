@@ -20,12 +20,12 @@ export ASCEND_GLOBAL_LOG_LEVEL=3
 export ASCEND_SLOG_PRINT_TO_STDOUT=0
 device_id=3
 
-output_path=output
+output_path=modelopt
 task_name=α猫
 train_data_path=dataset/train_cat
 reg_data_path=dataset/reg_cat
 class_word=猫
-pretrained_model_path=models
+pretrained_model_path=/home/wukongAI/minddiffusion/vision/wukong-huahua/models/
 train_config_file=configs/train_db_config.json
 token=α
 
@@ -39,6 +39,6 @@ nohup python -u run_db_train.py \
     --token=$token \
     --train_config=$train_config_file \
     --output_path=$output_path/$task_name \
-    --use_parallel=False \
+    --use_parallel=False  \
     --pretrained_model_path=$pretrained_model_path \
     > $output_path/$task_name/log_train 2>&1 &
